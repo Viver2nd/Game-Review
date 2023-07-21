@@ -1,4 +1,4 @@
-# **Fruit Slot-Machine**
+# **Game-Review Site**
 
 ## Screenshots
 ****
@@ -25,6 +25,8 @@ https://github.com/Viver2nd/Game-Review
 ****
 - Mobile Support
 - Game Preview Images/Videos
+- Improve UI
+- Deploy onto Heroku
 
 ## Planning
 ****
@@ -33,4 +35,5 @@ https://trello.com/b/s3PDCbbC/game-collection-project-2
 
 ## Bugs & Issues
 ****
-Site not supported on mobile.
+- Site not supported on mobile
+- Content not centered on 'Game List' page
