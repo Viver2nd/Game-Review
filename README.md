@@ -19,7 +19,7 @@ This site was created using HTML, CSS, JS, EJS, MongoDB and NodeJS.
 ## Getting Started
 ****
 Link:
-https://github.com/Viver2nd/Game-Review
+https://pacific-lake-04979-5a22bb955b93.herokuapp.com/
 
 ## Next Steps
 ****
