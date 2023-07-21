@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<h2 id="games-header">EDIT GAME: </h2>
+
+<form id="new-form" action="/games/<%= game.id %>?_method=PUT" method="POST">
+    <input class="input-box" placeholder="Game Title..." type="text" name="title" value="<%= game.title %>">
+    <br>
+    <input class="input-box" placeholder="Category..." type="text" name="category" value="<%= game.category %>">
+    <br>
+    <input class="input-box" placeholder="Developers..." type="text" name="developers" value="<%= game.developers %>">
+    <br>
+    <input class="input-box" placeholder="Platform..." type="text" name="platform" value="<%= game.platform %>">
+    <br>
+    <label id="release-date">RELEASE: </label>
+    <input class="input-box" placeholder="Release Date..." type="date" name="releaseDate" value="<%= game.releaseDate %>">
+    <br>
+    <input style="margin-top: 2.5vmin" type="submit" value="Update">
+  </form>
+
+  <%- include('../partials/footer') %>

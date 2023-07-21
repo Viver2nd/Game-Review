@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<h2 id="games-header">UPLOAD GAME: </h2>
+<form id="new-form" action="/games" method="POST">
+    <input class="input-box" placeholder="Game Title..." type="text" name="title">
+    <br>
+    <input class="input-box" placeholder="Category..." type="text" name="category">
+    <br>
+    <input class="input-box" placeholder="Developers..." type="text" name="developers">
+    <br>
+    <input class="input-box" placeholder="Platform..." type="text" name="platform">
+    <br>
+    <label id="release-date">RELEASE: </label>
+    <input class="input-box" placeholder="Release Date..." type="date" name="releaseDate">
+    <br>
+    <input style="margin-top: 2.5vmin" type="submit" value="Save">
+  </form>
+
+  <%- include('../partials/footer') %>

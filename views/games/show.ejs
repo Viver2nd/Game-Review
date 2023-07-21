@@ -1,0 +1,70 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+  <h1 id="games-header"><%= game.title.toUpperCase() %></h1>
+  <div class="show-title">CATEGORY: </div>
+  <div class="show-text"><%= game.category.toUpperCase() %></div>
+  <p></p>
+  <div class="show-title">DEVELOPERS: </div>
+  <div class="show-text"><%= game.developers.toUpperCase() %></div>
+  <p></p>
+  <div class="show-title">PLATFORM: </div>
+  <div class="show-text"><%= game.platform.toUpperCase() %></div>
+  <p></p>
+  <div class="show-title">RELEASE DATE: </div>
+  <div style="padding-bottom:1.25vmin" class="show-text"><%= game.releaseDate.toUpperCase() %></div>
+</section>
+
+<p></p>
+<a id="edit-upload-game" href="/games/<%= game._id %>/edit">Edit Game</a>
+<p></p>
+
+<% if (user) { %>
+<form id="new-review-form" action="/games/<%= game._id %>/reviews" method="POST">
+<h2 id="games-header">USER REVIEWS: </h2>
+<input id="add-review-box" name="comment"></input>
+<select id="submit-review-button" name="rating">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5" selected>5</option>
+</select>
+<input id="submit-review-button" type="submit" value="Save">
+</form>
+<% }; %>
+
+<table id="review-table">
+  <thead>
+    <tr>
+      <th id="user">Posted</th>
+      <th id="comment">Comment</th>
+      <th id="rating">Rating</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let total = 0 %>
+    <% game.reviews.forEach(function(r) { %>
+      <% total += r.rating %>
+      <tr>
+        <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ></td>
+        <td id="review-comment"><%= r.comment %></td>
+        <td><%= r.rating %></td>
+          <% if (user?._id.equals(r.user)) { %>
+            <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+              <div id="delete-review-button">
+                <button style="border-radius: 50%; background-color:#414141;" type="submit">X</button>
+              </div>
+            </form>
+          <% } %>
+        </td>
+      </tr>
+    <% }); %>
+    <tr>
+      <td colspan="3"></td>
+    </tr>
+  </tbody>
+</table>
+
+<%- include('../partials/footer') %>

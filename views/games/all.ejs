@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+        <h2 id="games-header">GAME LIST: </h2>
+    <tbody>
+      <% games.forEach(function(g) { %>
+        <tr>
+          <td class="game-list" id="game-list-title"><%= g.title %></td>
+          <td class="game-list"><a id="games-all-info" href="/games/<%= g._id %>">Info</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <p>​</p>
+    <a id="edit-upload-game" href="/games/new">Upload Game</a>
+
+    <%- include('../partials/footer') %>
