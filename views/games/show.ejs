@@ -34,6 +34,8 @@
 </form>
 <% }; %>
 
+<% if (game.reviews.length) { %>
+
 <table id="review-table">
   <thead>
     <tr>
@@ -66,5 +68,6 @@
     </tr>
   </tbody>
 </table>
+<% } %>
 
 <%- include('../partials/footer') %>

@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2 id="games-header">EDIT GAME: </h2>
+<h2 id="games-header-new-edit">EDIT GAME: </h2>
 
 <form id="new-form" action="/games/<%= game.id %>?_method=PUT" method="POST">
     <input class="input-box" placeholder="Game Title..." type="text" name="title" value="<%= game.title %>">
