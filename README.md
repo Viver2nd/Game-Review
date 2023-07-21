@@ -26,7 +26,6 @@ https://pacific-lake-04979-5a22bb955b93.herokuapp.com/
 - Mobile Support
 - Game Preview Images/Videos
 - Improve UI
-- Deploy onto Heroku
 
 ## Planning
 ****
