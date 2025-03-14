@@ -16,11 +16,6 @@
 ****
 This site was created using HTML, CSS, JS, EJS, MongoDB and NodeJS.
 
-## Getting Started
-****
-Link:
-https://quiet-river-00337-bc3bb082ee82.herokuapp.com/
-
 ## Next Steps
 ****
 - Mobile Support
